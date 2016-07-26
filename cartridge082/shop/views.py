@@ -12,15 +12,15 @@ from django.utils import simplejson
 from django.utils.translation import ugettext as _
 from django.views.decorators.cache import never_cache
 
-from mezzanine.conf import settings
-from mezzanine.utils.importing import import_dotted_path
-from mezzanine.utils.views import render, set_cookie, paginate
+from mezzanine145.conf import settings
+from mezzanine145.utils.importing import import_dotted_path
+from mezzanine145.utils.views import render, set_cookie, paginate
 
-from cartridge.shop import checkout
-from cartridge.shop.forms import AddProductForm, DiscountForm, CartItemFormSet
-from cartridge.shop.models import Product, ProductVariation, Order, OrderItem
-from cartridge.shop.models import DiscountCode
-from cartridge.shop.utils import recalculate_discount, sign
+from cartridge082.shop import checkout
+from cartridge082.shop.forms import AddProductForm, DiscountForm, CartItemFormSet
+from cartridge082.shop.models import Product, ProductVariation, Order, OrderItem
+from cartridge082.shop.models import DiscountCode
+from cartridge082.shop.utils import recalculate_discount, sign
 
 
 # Set up checkout handlers.

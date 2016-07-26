@@ -1,7 +1,7 @@
 
-from mezzanine.conf import settings
+from mezzanine145.conf import settings
 
-from cartridge.shop.models import Cart
+from cartridge082.shop.models import Cart
 
 
 class SSLRedirect(object):
@@ -18,7 +18,7 @@ class SSLRedirect(object):
                 warnings.warn("The settings %s are deprecated; "
                     "use SSL_ENABLED, SSL_FORCE_HOST and "
                     "SSL_FORCE_URL_PREFIXES, and add "
-                    "mezzanine.core.middleware.SSLRedirectMiddleware to "
+                    "mezzanine145.core.middleware.SSLRedirectMiddleware to "
                     "MIDDLEWARE_CLASSES." % ", ".join(old))
                 break
 

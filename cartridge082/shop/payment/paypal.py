@@ -4,9 +4,9 @@ import locale
 from django.core.exceptions import ImproperlyConfigured
 from django.http import QueryDict
 from django.utils.http import urlencode
-from mezzanine.conf import settings
+from mezzanine145.conf import settings
 
-from cartridge.shop.checkout import CheckoutError
+from cartridge082.shop.checkout import CheckoutError
 
 
 PAYPAL_NVP_API_ENDPOINT_SANDBOX = 'https://api-3t.sandbox.paypal.com/nvp'
@@ -35,7 +35,7 @@ def process(request, order_form, order):
     byte characters. Import the COUNTRIES tuple-of-tuples, included below,
     and subclass OrderForm in my app, e.g.:
 
-    from cartridge.shop.payment.paypal import COUNTRIES
+    from cartridge082.shop.payment.paypal import COUNTRIES
 
     class OrderForm(OrderForm):
         def __init__(self,*args,**kwrds):

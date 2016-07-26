@@ -1,11 +1,11 @@
 
 from django.template.defaultfilters import slugify
 
-from mezzanine.conf import settings
-from mezzanine.pages.page_processors import processor_for
-from mezzanine.utils.views import paginate
+from mezzanine145.conf import settings
+from mezzanine145.pages.page_processors import processor_for
+from mezzanine145.utils.views import paginate
 
-from cartridge.shop.models import Category, Product
+from cartridge082.shop.models import Category, Product
 
 
 @processor_for(Category)

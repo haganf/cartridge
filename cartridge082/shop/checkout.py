@@ -8,11 +8,11 @@ from django.contrib.auth.models import SiteProfileNotAvailable
 from django.utils.translation import ugettext as _
 from django.template.loader import get_template, TemplateDoesNotExist
 
-from mezzanine.conf import settings
-from mezzanine.utils.email import send_mail_template
+from mezzanine145.conf import settings
+from mezzanine145.utils.email import send_mail_template
 
-from cartridge.shop.models import Order
-from cartridge.shop.utils import set_shipping, set_tax, sign
+from cartridge082.shop.models import Order
+from cartridge082.shop.utils import set_shipping, set_tax, sign
 
 
 class CheckoutError(Exception):
@@ -89,7 +89,7 @@ def initial_order_data(request, form_class=None):
     - last order made by the user, via user ID or cookie
     - matching fields on an authenticated user and profile object
     """
-    from cartridge.shop.forms import OrderForm
+    from cartridge082.shop.forms import OrderForm
     if request.method == "POST":
         data = copy(request.POST)
         try:

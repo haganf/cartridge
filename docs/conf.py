@@ -17,11 +17,11 @@ import os
 
 docs_path = os.path.abspath(os.path.dirname(__file__))
 sys.path.insert(0, os.path.join(docs_path, ".."))
-sys.path.insert(0, os.path.join(docs_path, "..", "..", "mezzanine"))
-os.environ["DJANGO_SETTINGS_MODULE"] = "cartridge.project_template.settings"
+sys.path.insert(0, os.path.join(docs_path, "..", "..", "mezzanine145"))
+os.environ["DJANGO_SETTINGS_MODULE"] = "cartridge082.project_template.settings"
 
-import cartridge
-from mezzanine.utils import docs
+import cartridge082
+from mezzanine145.utils import docs
 
 docs.build_settings_docs(docs_path, prefix="SHOP_")
 docs.build_changelog(docs_path, package_name="cartridge")

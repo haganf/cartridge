@@ -5,10 +5,10 @@ from django.conf import settings
 from django.core.management import call_command
 from django.db.models.signals import post_syncdb
 
-from mezzanine.utils.tests import copy_test_to_media
+from mezzanine145.utils.tests import copy_test_to_media
 
-from cartridge.shop.models import Product
-from cartridge.shop import models as shop_app
+from cartridge082.shop.models import Product
+from cartridge082.shop import models as shop_app
 
 
 def create_product(app, created_models, verbosity, interactive, **kwargs):
@@ -39,7 +39,7 @@ def create_product(app, created_models, verbosity, interactive, **kwargs):
             print "Creating demo product and sale ..."
             print
         call_command("loaddata", "cartridge_optional.json")
-        copy_test_to_media("cartridge.shop", "product")
+        copy_test_to_media("cartridge082.shop", "product")
 
 
 if not settings.TESTING:

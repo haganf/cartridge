@@ -1,9 +1,9 @@
 
 from django.core.exceptions import ImproperlyConfigured
 from django.utils.translation import ugettext as _
-from mezzanine.conf import settings
+from mezzanine145.conf import settings
 
-from cartridge.shop.checkout import CheckoutError
+from cartridge082.shop.checkout import CheckoutError
 
 # Requires Stripe Library Module -- install from pypi.
 try:

@@ -4,9 +4,9 @@ from urllib import urlencode, urlopen
 from django.core.exceptions import ImproperlyConfigured
 from django.http import QueryDict
 from django.utils.translation import ugettext as _
-from mezzanine.conf import settings
+from mezzanine145.conf import settings
 
-from cartridge.shop.checkout import CheckoutError
+from cartridge082.shop.checkout import CheckoutError
 
 
 GATEWAY_COMMAND = getattr(settings, "EGATE_GATEWAY_COMMAND", "pay")

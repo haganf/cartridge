@@ -116,7 +116,7 @@
 # EXTRA_MODEL_FIELDS = (
 #     (
 #         # Dotted path to field.
-#         "mezzanine.blog.models.BlogPost.image",
+#         "mezzanine145.blog.models.BlogPost.image",
 #         # Dotted path to field class.
 #         "somelib.fields.ImageField",
 #         # Positional args for field class.
@@ -126,7 +126,7 @@
 #     ),
 #     # Example of adding a field to *all* of Mezzanine's content types:
 #     (
-#         "mezzanine.pages.models.Page.another_field",
+#         "mezzanine145.pages.models.Page.another_field",
 #         "IntegerField", # 'django.db.models.' is implied if path is omitted.
 #         ("Another name",),
 #         {"blank": True, "default": 1},
@@ -198,7 +198,7 @@ TEMPLATE_LOADERS = (
     "django.template.loaders.app_directories.Loader",
 )
 
-AUTHENTICATION_BACKENDS = ("mezzanine.core.auth_backends.MezzanineBackend",)
+AUTHENTICATION_BACKENDS = ("mezzanine145.core.auth_backends.MezzanineBackend",)
 
 # List of finder classes that know how to find static files in
 # various locations.
@@ -291,17 +291,17 @@ INSTALLED_APPS = (
     "django.contrib.sitemaps",
     "django.contrib.staticfiles",
     "cartridge.shop",
-    "mezzanine.boot",
-    "mezzanine.conf",
-    "mezzanine.core",
-    "mezzanine.generic",
-    "mezzanine.blog",
-    "mezzanine.forms",
-    "mezzanine.pages",
-    "mezzanine.galleries",
-    "mezzanine.twitter",
-    "mezzanine.accounts",
-    #"mezzanine.mobile",
+    "mezzanine145.boot",
+    "mezzanine145.conf",
+    "mezzanine145.core",
+    "mezzanine145.generic",
+    "mezzanine145.blog",
+    "mezzanine145.forms",
+    "mezzanine145.pages",
+    "mezzanine145.galleries",
+    "mezzanine145.twitter",
+    "mezzanine145.accounts",
+    #"mezzanine145.mobile",
 )
 
 # List of processors used by RequestContext to populate the context.
@@ -316,14 +316,14 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
     "django.core.context_processors.tz",
-    "mezzanine.conf.context_processors.settings",
+    "mezzanine145.conf.context_processors.settings",
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
 # these middleware classes will be applied in the order given, and in the
 # response phase the middleware will be applied in reverse order.
 MIDDLEWARE_CLASSES = (
-    "mezzanine.core.middleware.UpdateCacheMiddleware",
+    "mezzanine145.core.middleware.UpdateCacheMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.redirects.middleware.RedirectFallbackMiddleware",
@@ -331,15 +331,15 @@ MIDDLEWARE_CLASSES = (
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "cartridge.shop.middleware.ShopMiddleware",
-    "mezzanine.core.request.CurrentRequestMiddleware",
-    "mezzanine.core.middleware.TemplateForDeviceMiddleware",
-    "mezzanine.core.middleware.TemplateForHostMiddleware",
-    "mezzanine.core.middleware.AdminLoginInterfaceSelectorMiddleware",
-    "mezzanine.core.middleware.SitePermissionMiddleware",
+    "mezzanine145.core.request.CurrentRequestMiddleware",
+    "mezzanine145.core.middleware.TemplateForDeviceMiddleware",
+    "mezzanine145.core.middleware.TemplateForHostMiddleware",
+    "mezzanine145.core.middleware.AdminLoginInterfaceSelectorMiddleware",
+    "mezzanine145.core.middleware.SitePermissionMiddleware",
     # Uncomment the following if using any of the SSL settings:
-    # "mezzanine.core.middleware.SSLRedirectMiddleware",
-    "mezzanine.pages.middleware.PageMiddleware",
-    "mezzanine.core.middleware.FetchFromCacheMiddleware",
+    # "mezzanine145.core.middleware.SSLRedirectMiddleware",
+    "mezzanine145.pages.middleware.PageMiddleware",
+    "mezzanine145.core.middleware.FetchFromCacheMiddleware",
 )
 
 
@@ -385,5 +385,5 @@ except ImportError:
 # set_dynamic_settings() will rewrite globals based on what has been
 # defined so far, in order to provide some better defaults where
 # applicable.
-from mezzanine.utils.conf import set_dynamic_settings
+from mezzanine145.utils.conf import set_dynamic_settings
 set_dynamic_settings(globals())

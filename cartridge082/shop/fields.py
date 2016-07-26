@@ -8,7 +8,7 @@ from locale import localeconv
 from django.db.models import CharField, DecimalField
 from django.utils.translation import ugettext_lazy as _
 
-from cartridge.shop.utils import set_locale
+from cartridge082.shop.utils import set_locale
 
 
 class OptionField(CharField):
@@ -73,6 +73,6 @@ class DiscountCodeField(CharField):
 try:
     from south.modelsinspector import add_introspection_rules
     add_introspection_rules(rules=[((OptionField, MoneyField, SKUField,
-        DiscountCodeField), [], {})], patterns=["cartridge\.shop\.fields\."])
+        DiscountCodeField), [], {})], patterns=["cartridge082\.shop\.fields\."])
 except ImportError:
     pass

@@ -8,16 +8,16 @@ from django.test import TestCase
 from django.test.client import RequestFactory
 from django.utils.timezone import now
 from django.utils.unittest import skipUnless
-from mezzanine.conf import settings
-from mezzanine.core.models import CONTENT_STATUS_PUBLISHED
-from mezzanine.utils.tests import run_pyflakes_for_package
-from mezzanine.utils.tests import run_pep8_for_package
+from mezzanine145.conf import settings
+from mezzanine145.core.models import CONTENT_STATUS_PUBLISHED
+from mezzanine145.utils.tests import run_pyflakes_for_package
+from mezzanine145.utils.tests import run_pep8_for_package
 
-from cartridge.shop.models import Product, ProductOption, ProductVariation
-from cartridge.shop.models import Category, Cart, Order, DiscountCode
-from cartridge.shop.models import Sale
-from cartridge.shop.forms import OrderForm
-from cartridge.shop.checkout import CHECKOUT_STEPS
+from cartridge082.shop.models import Product, ProductOption, ProductVariation
+from cartridge082.shop.models import Category, Cart, Order, DiscountCode
+from cartridge082.shop.models import Sale
+from cartridge082.shop.forms import OrderForm
+from cartridge082.shop.checkout import CHECKOUT_STEPS
 
 
 TEST_STOCK = 5
@@ -350,12 +350,12 @@ class ShopTests(TestCase):
         extra_ignore = (
                 "redefinition of unused 'digest'",
                 "redefinition of unused 'OperationalError'",
-                "'from mezzanine.project_template.settings import *' used",
+                "'from mezzanine145.project_template.settings import *' used",
         )
         warnings = []
-        warnings.extend(run_pyflakes_for_package("cartridge",
+        warnings.extend(run_pyflakes_for_package("cartridge082",
                                                  extra_ignore=extra_ignore))
-        warnings.extend(run_pep8_for_package("cartridge"))
+        warnings.extend(run_pep8_for_package("cartridge082"))
         if warnings:
             self.fail("Syntax warnings!\n\n%s" % "\n".join(warnings))
 
@@ -418,11 +418,11 @@ try:
 except ImportError:
     stripe_used = False
 else:
-    stripe_handler = "cartridge.shop.payment.stripe_api.process"
+    stripe_handler = "cartridge082.shop.payment.stripe_api.process"
     stripe_used = settings.SHOP_HANDLER_PAYMENT == stripe_handler
     if stripe_used:
         settings.STRIPE_API_KEY = "dummy"
-        from cartridge.shop.payment import stripe_api
+        from cartridge082.shop.payment import stripe_api
 
 
 class StripeTests(TestCase):
@@ -481,7 +481,7 @@ class TaxationTests(TestCase):
         Ensure that the handler specified in default settings exists as well as
         the default setting itself.
         '''
-        from mezzanine.utils.importing import import_dotted_path
+        from mezzanine145.utils.importing import import_dotted_path
 
         settings.use_editable()
 
@@ -499,7 +499,7 @@ class TaxationTests(TestCase):
         Regression test to ensure that set_tax still sets the appropriate
         session variables.
         '''
-        from cartridge.shop.utils import set_tax
+        from cartridge082.shop.utils import set_tax
 
         tax_type = 'Tax for Testing'
         tax_total = 56.65

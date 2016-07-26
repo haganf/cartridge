@@ -20,7 +20,7 @@ for e in exclude:
 
 from setuptools import setup, find_packages
 
-from cartridge import __version__ as version
+from cartridge082 import __version__ as version
 
 try:
     setup(

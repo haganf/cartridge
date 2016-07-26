@@ -8,14 +8,14 @@ from django.core.management.base import BaseCommand
 from django.core.management.base import CommandError
 from django.utils.translation import ugettext as _
 from django.db.utils import IntegrityError
-from mezzanine.conf import settings
+from mezzanine145.conf import settings
 
-from cartridge.shop.models import Product
-from cartridge.shop.models import ProductOption
-from cartridge.shop.models import ProductImage
-from cartridge.shop.models import ProductVariation
-from cartridge.shop.models import Category
-from mezzanine.core.models import CONTENT_STATUS_PUBLISHED
+from cartridge082.shop.models import Product
+from cartridge082.shop.models import ProductOption
+from cartridge082.shop.models import ProductImage
+from cartridge082.shop.models import ProductVariation
+from cartridge082.shop.models import Category
+from mezzanine145.core.models import CONTENT_STATUS_PUBLISHED
 
 
 # images get copied from thie directory

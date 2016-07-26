@@ -9,7 +9,7 @@ from django.core.exceptions import ImproperlyConfigured
 from django.utils.timezone import now
 from django.utils.translation import ugettext as _
 
-from mezzanine.conf import settings
+from mezzanine145.conf import settings
 
 
 class EmptyCart(object):
@@ -42,7 +42,7 @@ class EmptyCart(object):
         Create a real cart object, add the items to it and store
         the cart ID in the session.
         """
-        from cartridge.shop.models import Cart
+        from cartridge082.shop.models import Cart
         cart = Cart.objects.create(last_updated=now())
         cart.add_item(*args, **kwargs)
         self._request.session["cart"] = cart.id
@@ -59,8 +59,8 @@ def recalculate_discount(request):
     """
     Updates an existing discount code when the cart is modified.
     """
-    from cartridge.shop.forms import DiscountForm
-    from cartridge.shop.models import Cart
+    from cartridge082.shop.forms import DiscountForm
+    from cartridge082.shop.models import Cart
     # Rebind the cart to request since it's been modified.
     request.cart = Cart.objects.from_request(request)
     discount_code = request.session.get("discount_code", "")

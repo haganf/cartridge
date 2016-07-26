@@ -2,7 +2,7 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
-from mezzanine.core.views import direct_to_template
+from mezzanine145.core.views import direct_to_template
 
 
 admin.autodiscover()
@@ -50,7 +50,7 @@ urlpatterns = patterns("",
     # "/.html" - so for this case, the template "pages/index.html" can
     # be used.
 
-    # url("^$", "mezzanine.pages.views.page", {"slug": "/"}, name="home"),
+    # url("^$", "mezzanine145.pages.views.page", {"slug": "/"}, name="home"),
 
     # HOMEPAGE FOR A BLOG-ONLY SITE
     # -----------------------------
@@ -60,20 +60,20 @@ urlpatterns = patterns("",
     # ``settings.py`` module, and delete the blog page object from the
     # page tree in the admin if it was installed.
 
-    # url("^$", "mezzanine.blog.views.blog_post_list", name="home"),
+    # url("^$", "mezzanine145.blog.views.blog_post_list", name="home"),
 
     # MEZZANINE'S URLS
     # ----------------
     # ADD YOUR OWN URLPATTERNS *ABOVE* THE LINE BELOW.
-    # ``mezzanine.urls`` INCLUDES A *CATCH ALL* PATTERN
-    # FOR PAGES, SO URLPATTERNS ADDED BELOW ``mezzanine.urls``
+    # ``mezzanine145.urls`` INCLUDES A *CATCH ALL* PATTERN
+    # FOR PAGES, SO URLPATTERNS ADDED BELOW ``mezzanine145.urls``
     # WILL NEVER BE MATCHED!
 
     # If you'd like more granular control over the patterns in
     # ``mezzanine.urls``, go right ahead and take the parts you want
     # from it, and use them directly below instead of using
     # ``mezzanine.urls``.
-    ("^", include("mezzanine.urls")),
+    ("^", include("mezzanine145.urls")),
 
     # MOUNTING MEZZANINE UNDER A PREFIX
     # ---------------------------------
@@ -89,11 +89,11 @@ urlpatterns = patterns("",
     # Note that for any of the various homepage patterns above, you'll
     # need to use the ``SITE_PREFIX`` setting as well.
 
-    # ("^%s/" % settings.SITE_PREFIX, include("mezzanine.urls"))
+    # ("^%s/" % settings.SITE_PREFIX, include("mezzanine145.urls"))
 
 )
 
 # Adds ``STATIC_URL`` to the context of error pages, so that error
 # pages can use JS, CSS and images.
-handler404 = "mezzanine.core.views.page_not_found"
-handler500 = "mezzanine.core.views.server_error"
+handler404 = "mezzanine145.core.views.page_not_found"
+handler500 = "mezzanine145.core.views.server_error"

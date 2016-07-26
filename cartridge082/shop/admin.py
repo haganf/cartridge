@@ -32,17 +32,17 @@ from django.contrib import admin
 from django.db.models import ImageField
 from django.utils.translation import ugettext_lazy as _
 
-from mezzanine.conf import settings
-from mezzanine.core.admin import DisplayableAdmin, TabularDynamicInlineAdmin
-from mezzanine.pages.admin import PageAdmin
+from mezzanine145.conf import settings
+from mezzanine145.core.admin import DisplayableAdmin, TabularDynamicInlineAdmin
+from mezzanine145.pages.admin import PageAdmin
 
-from cartridge.shop.fields import MoneyField
-from cartridge.shop.forms import ProductAdminForm, ProductVariationAdminForm
-from cartridge.shop.forms import ProductVariationAdminFormset
-from cartridge.shop.forms import DiscountAdminForm, ImageWidget, MoneyWidget
-from cartridge.shop.models import Category, Product, ProductImage
-from cartridge.shop.models import ProductVariation, ProductOption, Order
-from cartridge.shop.models import OrderItem, Sale, DiscountCode
+from cartridge082.shop.fields import MoneyField
+from cartridge082.shop.forms import ProductAdminForm, ProductVariationAdminForm
+from cartridge082.shop.forms import ProductVariationAdminFormset
+from cartridge082.shop.forms import DiscountAdminForm, ImageWidget, MoneyWidget
+from cartridge082.shop.models import Category, Product, ProductImage
+from cartridge082.shop.models import ProductVariation, ProductOption, Order
+from cartridge082.shop.models import OrderItem, Sale, DiscountCode
 
 
 # Lists of field names.

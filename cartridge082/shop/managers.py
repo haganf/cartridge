@@ -6,7 +6,7 @@ from django.db.models import Manager, Q
 from django.utils.datastructures import SortedDict
 from django.utils.timezone import now
 
-from mezzanine.conf import settings
+from mezzanine145.conf import settings
 
 
 class CartManager(Manager):
@@ -39,7 +39,7 @@ class CartManager(Manager):
                 request.session.modified = True
             except KeyError:
                 pass
-            from cartridge.shop.utils import EmptyCart
+            from cartridge082.shop.utils import EmptyCart
             cart = EmptyCart(request)
         return cart
 

@@ -26,10 +26,10 @@ from django.contrib.webdesign.lorem_ipsum import paragraph
 from django.db import connection
 from django.db.models import F
 
-from mezzanine.conf import settings
-from mezzanine.core.models import CONTENT_STATUS_PUBLISHED
+from mezzanine145.conf import settings
+from mezzanine145.core.models import CONTENT_STATUS_PUBLISHED
 
-from cartridge.shop.models import Category, Product, ProductOption
+from cartridge082.shop.models import Category, Product, ProductOption
 
 
 try:

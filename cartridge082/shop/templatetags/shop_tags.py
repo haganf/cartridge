@@ -4,7 +4,7 @@ import platform
 
 from django import template
 
-from cartridge.shop.utils import set_locale
+from cartridge082.shop.utils import set_locale
 
 
 register = template.Library()

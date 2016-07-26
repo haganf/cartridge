@@ -11,15 +11,15 @@ from django.dispatch import receiver
 from django.utils.timezone import now
 from django.utils.translation import ugettext, ugettext_lazy as _
 
-from mezzanine.conf import settings
-from mezzanine.core.fields import FileField
-from mezzanine.core.managers import DisplayableManager
-from mezzanine.core.models import Displayable, RichText, Orderable
-from mezzanine.generic.fields import RatingField
-from mezzanine.pages.models import Page
-from mezzanine.utils.models import AdminThumbMixin, upload_to
+from mezzanine145.conf import settings
+from mezzanine145.core.fields import FileField
+from mezzanine145.core.managers import DisplayableManager
+from mezzanine145.core.models import Displayable, RichText, Orderable
+from mezzanine145.generic.fields import RatingField
+from mezzanine145.pages.models import Page
+from mezzanine145.utils.models import AdminThumbMixin, upload_to
 
-from cartridge.shop import fields, managers
+from cartridge082.shop import fields, managers
 
 try:
     from _mysql_exceptions import OperationalError

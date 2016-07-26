@@ -3,7 +3,7 @@ from socket import gethostname
 
 from django.utils.translation import ugettext_lazy as _
 
-from mezzanine.conf import register_setting
+from mezzanine145.conf import register_setting
 
 
 ####################################################################
